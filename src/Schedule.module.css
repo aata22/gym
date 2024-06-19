@@ -1,0 +1,62 @@
+/* General page styles */
+.tableContainer {
+  width: 90%;
+  max-width: 1000px;
+  overflow-x: auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px auto;
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ccc;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+th {
+  background-color: #333;
+  color: #fff;
+}
+
+td {
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+td:not(:first-child):not(:empty) {
+  background-color: #ffe6e6;
+  color: #d60000;
+}
+
+thead {
+  background-color: #444;
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  th, td {
+      padding: 8px 10px;
+  }
+
+  .tableContainer {
+      padding: 10px;
+  }
+}

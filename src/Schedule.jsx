@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import React from "react";
-import './Schedule.css';
+import styles from "./Schedule.module.css";
+
 
 export default function Schedule(){
 
@@ -19,7 +20,7 @@ export default function Schedule(){
 
 
     return(
-        <div>
+        <div className={styles.tableContainer}>
            
             <table>
                 <thead>
@@ -32,8 +33,8 @@ export default function Schedule(){
                     </tr>
                 </thead>
                 <tbody>
-                    {name.taimi.map(taimi => (
-                        <tr key={taimi}>
+                    {name.taimi.map((taimi,  index) => (
+                        <tr key={index}>
                             <td>{taimi}</td>
                             {name.days.map(day => (
                                 <td>

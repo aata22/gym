@@ -11,17 +11,17 @@ const VideoBackground = ({ children }) => {
   }, []);
 
   return (
-    <div class="video-background">
+    <div className="video-background">
       <video ref={videoRef} autoPlay loop muted>
-        <source src="public/fit.mp4" type="video/mp4" />
+        <source src="/fit.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div class="overlay"></div>
-      <div class="content">
-        <div class="header">
+      <div className="overlay"></div>
+      <div className="content">
+        <div className="header">
           <h1>MATISI GYM</h1>
         </div>
-        <div class="form-div">
+        <div className="form-div">
           {children}
         </div>
       </div>
