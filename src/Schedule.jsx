@@ -8,7 +8,7 @@ export default function Schedule(){
     const [name, setName] = useState({ days: [], taimi: [], scheduleObj: {} });
 
     useEffect(() => {
-        fetch('http://localhost:3001/get')
+        fetch('http://localhost:4000/get')
         .then((response) => response.json())
         .then(data => {
             setName(data);

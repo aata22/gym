@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'
 import VideoBackground from "./VideoBackground.jsx";
@@ -15,7 +15,7 @@ export default function Form () {
 
     //handle gets
     useEffect(() => {
-        fetch('http://localhost:3001/get-form-info')
+        fetch('http://localhost:4000/get-form-info')
         .then(response => response.json())
         .then((data) => {
           console.log('fetched data:', data)
@@ -49,7 +49,7 @@ export default function Form () {
         try {
             console.log(`Submitting: ${name}, ${day}, ${taimi}`); // Add this line
 
-            const response = await axios.post('http://localhost:3001/submit', {name, day, taimi})
+            const response = await axios.post('http://localhost:4000/submit', {name, day, taimi})
             console.log(response.data.message);
             navigate('/Schedule');
         } catch (error) {
